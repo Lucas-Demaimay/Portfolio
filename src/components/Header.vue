@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1>Lucas Demaimay</h1>
+  <h2>Lucas Demaimay</h2>
   <nav>
     <ul>
       <li><a>About</a></li>
