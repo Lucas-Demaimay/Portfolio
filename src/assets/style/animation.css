@@ -1,0 +1,17 @@
+@keyframes colorAnimation {
+  0% {
+    background: white;
+  }
+  25% {
+    background: #b6f9f6;
+  }
+  50% {
+    background: #fff0a6;
+  }
+  75% {
+    background: #ffbfef;
+  }
+  100% {
+    background: white;
+  }
+}

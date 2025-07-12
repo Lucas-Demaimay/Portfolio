@@ -1,6 +1,7 @@
 /* https://coolors.co/ffffff-353535-b6f9f6-fff0a6-ffbfef */
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "./style/animation.css";
 @import "./style/header.css";
 @import "./style/footer.css";
 
@@ -19,11 +20,7 @@ main {
   flex: 1;
 }
 
-a:hover {
-  cursor: pointer;
-}
-
-#app {
+.app {
   font-family: "Quicksand", Arial, sans-serif;
   font-size: medium;
   text-rendering: optimizeLegibility;
@@ -31,4 +28,22 @@ a:hover {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  cursor: none;
+  position: relative;
+}
+
+#pointer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: white;
+  animation: 3s infinite colorAnimation;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  transition: transform 0.05s linear;
+  border: solid #353535 1px;
+  
 }
