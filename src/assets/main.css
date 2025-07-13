@@ -40,10 +40,10 @@ main {
   background-color: white;
   animation: 3s infinite colorAnimation;
   border-radius: 100%;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height:10px;
   pointer-events: none;
-  transition: transform 0.05s linear;
-  border: solid #353535 1px;
+  transition: left 0.05s ease, top 0.05s ease;
+  border: solid #353535 2px;
   
 }
