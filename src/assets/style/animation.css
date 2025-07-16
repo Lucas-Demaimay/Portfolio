@@ -16,6 +16,24 @@
   }
 }
 
+@keyframes borderColorAnimation {
+  0% {
+    border-color: white;
+  }
+  25% {
+    border-color: #b6f9f6;
+  }
+  50% {
+    border-color: #fff0a6;
+  }
+  75% {
+    border-color: #ffbfef;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
 @keyframes waveAnimation {
   0% {
     transform: translateX(15vw);
@@ -60,9 +78,11 @@
 
 @keyframes appear {
   from {
+    transform: translateX(5vw);
     color: #35353500;
   }
   to {
+    transform: translateX(0);
     color: #353535;
   }
 }

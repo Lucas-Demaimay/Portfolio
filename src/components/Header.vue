@@ -2,12 +2,12 @@
 </script>
 
 <template>
-  <h2>Lucas Demaimay</h2>
+  <h2><RouterLink :to="'/'">Lucas Demaimay</RouterLink></h2>
   <nav>
     <ul>
-      <li><a>About</a></li>
-      <li><a>Experience</a></li>
-      <li><a>Projects</a></li>
+      <li><RouterLink :to="'about'">About</RouterLink></li>
+      <li><RouterLink :to="'experience'">Experience</RouterLink></li>
+      <li><RouterLink :to="'projects'">Projects</RouterLink></li>
     </ul>
   </nav>
 </template>

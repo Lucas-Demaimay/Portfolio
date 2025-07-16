@@ -5,20 +5,28 @@ import Footer from "@/components/Footer.vue";
 
 <template>
   <header>
-    <Header/>
+    <Header />
   </header>
   <main>
     <div class="coolBackground">
-      <div v-for="x in 75" class="block" :style="{ animationDelay: (x * 0.2) + 's' }"></div>   
+      <div
+        v-for="x in 75"
+        class="block"
+        :style="{ animationDelay: x * 0.2 + 's' }"
+      ></div>
     </div>
     <div class="coolBackground">
-      <div v-for="x in 75" class="invertedBlock" :style="{ animationDelay: (x * 0.2) + 's' }"></div>   
+      <div
+        v-for="x in 75"
+        class="invertedBlock"
+        :style="{ animationDelay: x * 0.2 + 's' }"
+      ></div>
     </div>
     <div class="foreground">
-          <slot />
+      <slot />
     </div>
   </main>
   <footer>
-    <Footer/>
+    <Footer />
   </footer>
 </template>
