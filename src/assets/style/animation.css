@@ -1,0 +1,68 @@
+@keyframes colorAnimation {
+  0% {
+    background: white;
+  }
+  25% {
+    background: #b6f9f6;
+  }
+  50% {
+    background: #fff0a6;
+  }
+  75% {
+    background: #ffbfef;
+  }
+  100% {
+    background: white;
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+  25% {
+    background: #fff0a6;
+  }
+  50% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+  75% {
+    background: #ffbfef;
+  }
+  100% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+}
+
+@keyframes invertedWaveAnimation {
+  0% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+  25% {
+    background: #ffbfef;
+  }
+  50% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+  75% {
+    background: #fff0a6;
+  }
+  100% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+}
+
+@keyframes appear {
+  from {
+    color: #35353500;
+  }
+  to {
+    color: #353535;
+  }
+}
