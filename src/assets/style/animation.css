@@ -15,3 +15,24 @@
     background: white;
   }
 }
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+  25% {
+    background: #fff0a6;
+  }
+  50% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+  75% {
+    background: #ffbfef;
+  }
+  100% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+}
