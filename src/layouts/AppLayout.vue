@@ -9,9 +9,14 @@ import Footer from "@/components/Footer.vue";
   </header>
   <main>
     <div class="coolBackground">
-      <div v-for="x in 90" class="block" :style="{ animationDelay: (x * 0.2) + 's' }"></div>   
+      <div v-for="x in 75" class="block" :style="{ animationDelay: (x * 0.2) + 's' }"></div>   
     </div>
-    <slot />
+    <div class="coolBackground">
+      <div v-for="x in 75" class="invertedBlock" :style="{ animationDelay: (x * 0.2) + 's' }"></div>   
+    </div>
+    <div class="foreground">
+          <slot />
+    </div>
   </main>
   <footer>
     <Footer/>

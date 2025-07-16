@@ -36,3 +36,33 @@
     background: #b6f9f6;
   }
 }
+
+@keyframes invertedWaveAnimation {
+  0% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+  25% {
+    background: #ffbfef;
+  }
+  50% {
+    transform: translateX(15vw);
+    background: #b6f9f6;
+  }
+  75% {
+    background: #fff0a6;
+  }
+  100% {
+    transform: translateX(-15vw);
+    background: #b6f9f6;
+  }
+}
+
+@keyframes appear {
+  from {
+    color: #35353500;
+  }
+  to {
+    color: #353535;
+  }
+}

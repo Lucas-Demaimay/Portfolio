@@ -16,16 +16,6 @@ header li {
   margin: 10px;
 }
 
-a::after {
-  content: "";
-  display: block;
-  height: 1.5px;
-  background: white;
-  width: 0;
-  transition: width 0.3s ease-in-out;
-  animation: 3s infinite colorAnimation;
-}
-
-a:hover::after {
-  width: 100%;
+header a {
+  color: white;
 }
