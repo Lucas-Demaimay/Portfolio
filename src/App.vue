@@ -13,20 +13,25 @@ function movePointer(event) {
 }
 
 function downPointer() {
-  if(pointer.value) {
-      pointer.value.style.transform = "scale(65%)";
+  if (pointer.value) {
+    pointer.value.style.transform = "scale(65%)";
   }
 }
 
 function upPointer() {
-  if(pointer.value) {
-      pointer.value.style.transform = "scale(100%)";
+  if (pointer.value) {
+    pointer.value.style.transform = "scale(100%)";
   }
 }
 </script>
 
 <template>
-  <div @pointermove="movePointer" @mousedown="downPointer" @mouseup="upPointer" class="app">
+  <div
+    @pointermove="movePointer"
+    @mousedown="downPointer"
+    @mouseup="upPointer"
+    class="app"
+  >
     <div
       ref="pointer"
       :style="{ left: posX + 'px', top: posY + 'px' }"

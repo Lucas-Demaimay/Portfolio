@@ -16,53 +16,73 @@
   }
 }
 
-@keyframes waveAnimation {
+@keyframes borderColorAnimation {
   0% {
-    transform: translateX(15vw);
+    border-color: white;
+  }
+  25% {
+    border-color: #b6f9f6;
+  }
+  50% {
+    border-color: #fff0a6;
+  }
+  75% {
+    border-color: #ffbfef;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+@keyframes morphAnimation {
+  0% {
+    transform: translateX(var(--start, 0));
     background: #b6f9f6;
   }
   25% {
     background: #fff0a6;
   }
   50% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--mid, 0));
     background: #b6f9f6;
   }
   75% {
     background: #ffbfef;
   }
   100% {
-    transform: translateX(15vw);
+    transform: translateX(var(--start, 0));
     background: #b6f9f6;
   }
 }
 
-@keyframes invertedWaveAnimation {
+@keyframes morphAnimationBis {
   0% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--startBis, 0));
     background: #b6f9f6;
   }
   25% {
     background: #ffbfef;
   }
   50% {
-    transform: translateX(15vw);
+    transform: translateX(var(--midBis, 0));
     background: #b6f9f6;
   }
   75% {
     background: #fff0a6;
   }
   100% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--startBis, 0));
     background: #b6f9f6;
   }
 }
 
 @keyframes appear {
   from {
+    transform: translateX(5vw);
     color: #35353500;
   }
   to {
+    transform: translateX(0);
     color: #353535;
   }
 }

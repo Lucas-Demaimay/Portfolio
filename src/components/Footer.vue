@@ -4,5 +4,5 @@
     <li><a href="https://github.com/Lucas-Demaimay">GitHub</a></li>
     <li><a href="mailto:demaimay.lucas@gmail.com">Mail</a></li>
   </ul>
-  <p>© Lucas Demaimay 2025 - All rights reserved</p>
+  <span>© Lucas Demaimay 2025 - All rights reserved</span>
 </template>
