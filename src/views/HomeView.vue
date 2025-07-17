@@ -17,7 +17,6 @@ useSmoothTransition(midBis, ref(15));
     }}</span>
   </h1>
   <p>
-    I am Lucas Demaimay.<br />I am an IT student at Université Grand Ouest
-    Normandie, located in Ifs, in France.
+    I am Lucas Demaimay.<br />I am currently open to apprenticeship opportunities in the field of IT. 
   </p>
 </template>

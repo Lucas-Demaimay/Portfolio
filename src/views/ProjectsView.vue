@@ -4,16 +4,16 @@ import { useAnimationStore } from "@/composable/useAnimationStore";
 import { useSmoothTransition } from "@/composable/useSmoothTransition";
 const { start, mid, startBis, midBis } = useAnimationStore();
 
-useSmoothTransition(start, ref(5));
-useSmoothTransition(mid, ref(-5));
+useSmoothTransition(start, ref(20));
+useSmoothTransition(mid, ref(5));
 useSmoothTransition(startBis, ref(-20));
-useSmoothTransition(midBis, ref(20));
+useSmoothTransition(midBis, ref(-5));
 </script>
 
 <template>
   <h1>
-    <span v-for="x in 5" :style="{ animationDelay: (x - 1) * 0.3 + 's' }">{{
-      "About".charAt(x - 1)
+    <span v-for="x in 8" :style="{ animationDelay: (x - 1) * 0.3 + 's' }">{{
+      "Projects".charAt(x - 1)
     }}</span>
   </h1>
   <p>
