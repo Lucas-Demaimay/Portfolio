@@ -34,44 +34,44 @@
   }
 }
 
-@keyframes waveAnimation {
+@keyframes morphAnimation {
   0% {
-    transform: translateX(15vw);
+    transform: translateX(var(--start, 0));
     background: #b6f9f6;
   }
   25% {
     background: #fff0a6;
   }
   50% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--mid, 0));
     background: #b6f9f6;
   }
   75% {
     background: #ffbfef;
   }
   100% {
-    transform: translateX(15vw);
+    transform: translateX(var(--start, 0));
     background: #b6f9f6;
   }
 }
 
-@keyframes invertedWaveAnimation {
+@keyframes morphAnimationBis {
   0% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--startBis, 0));
     background: #b6f9f6;
   }
   25% {
     background: #ffbfef;
   }
   50% {
-    transform: translateX(15vw);
+    transform: translateX(var(--midBis, 0));
     background: #b6f9f6;
   }
   75% {
     background: #fff0a6;
   }
   100% {
-    transform: translateX(-15vw);
+    transform: translateX(var(--startBis, 0));
     background: #b6f9f6;
   }
 }

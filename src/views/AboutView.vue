@@ -1,3 +1,15 @@
+<script setup>
+import { ref } from "vue";
+import { useAnimationStore } from "@/composable/useAnimationStore";
+import { useSmoothTransition } from "@/composable/useSmoothTransition";
+const { start, mid, startBis, midBis } = useAnimationStore();
+
+useSmoothTransition(start, ref(0));
+useSmoothTransition(mid, ref(0));
+useSmoothTransition(startBis, ref(-15));
+useSmoothTransition(midBis, ref(15));
+</script>
+
 <template>
   <h1>
     <span v-for="x in 5" :style="{ animationDelay: (x - 1) * 0.3 + 's' }">{{
