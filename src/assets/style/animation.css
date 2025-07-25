@@ -16,6 +16,24 @@
   }
 }
 
+@keyframes colorBlackAnimation {
+  0% {
+    background: #353535;
+  }
+  25% {
+    background: #b6f9f6;
+  }
+  50% {
+    background: #fff0a6;
+  }
+  75% {
+    background: #ffbfef;
+  }
+  100% {
+    background: #353535;
+  }
+}
+
 @keyframes borderColorAnimation {
   0% {
     border-color: white;
