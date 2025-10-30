@@ -27,6 +27,6 @@ defineProps({
         <p class="keywords">{{ keywords }}</p>
         <p class="description">{{ description }}</p>
         <img v-if="image" :src="image" :alt="alt"></img>
-        <a v-for="link in links" class="project-link">{{ link }}</a>
+        <a v-for="link in links" class="project-link" :href="link">{{ link }}</a>
     </div>
 </template>
