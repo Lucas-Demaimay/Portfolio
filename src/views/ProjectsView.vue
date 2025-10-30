@@ -1,15 +1,27 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Project from "@/components/Project.vue";
 import { useAnimationStore } from "@/composable/useAnimationStore";
 import { useSmoothTransition } from "@/composable/useSmoothTransition";
-import projects from '@/data/projects.json';
+import projects from "@/data/projects.json";
 const { start, mid, startBis, midBis } = useAnimationStore();
 
 useSmoothTransition(start, ref(20));
 useSmoothTransition(mid, ref(5));
 useSmoothTransition(startBis, ref(-20));
 useSmoothTransition(midBis, ref(-5));
+
+const selectedProject = ref(0);
+const currentProject = computed(() => projects[selectedProject.value]);
+
+function previousProject() {
+  selectedProject.value = (selectedProject.value - 1 + projects.length) % projects.length;
+  console.log(selectedProject.value)
+}
+function nextProject() {
+  selectedProject.value = (selectedProject.value + 1) % projects.length;
+  console.log(selectedProject.value)
+}
 </script>
 
 <template>
@@ -20,15 +32,16 @@ useSmoothTransition(midBis, ref(-5));
   </h1>
   <div class="row">
     <div class="column">
-      <Project 
-        v-for="project in projects"
-        :title="project.title"
-        :keywords="project.keywords"
-        :description="project.description"
-        :image="project.image"
-        :alt="project.alt"
-        :links="project.links"
+      <button @click="previousProject"></button>
+      <Project
+        :title="currentProject?.title"
+        :keywords="currentProject?.keywords"
+        :description="currentProject?.description"
+        :image="currentProject?.image"
+        :alt="currentProject?.alt"
+        :links="currentProject?.links"
       />
+      <button @click="nextProject"></button>
     </div>
   </div>
 </template>
