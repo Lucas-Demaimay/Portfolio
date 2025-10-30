@@ -1,13 +1,27 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import Project from "@/components/Project.vue";
 import { useAnimationStore } from "@/composable/useAnimationStore";
 import { useSmoothTransition } from "@/composable/useSmoothTransition";
+import projects from "@/data/projects.json";
 const { start, mid, startBis, midBis } = useAnimationStore();
 
 useSmoothTransition(start, ref(20));
 useSmoothTransition(mid, ref(5));
 useSmoothTransition(startBis, ref(-20));
 useSmoothTransition(midBis, ref(-5));
+
+const selectedProject = ref(0);
+const currentProject = computed(() => projects[selectedProject.value]);
+
+function previousProject() {
+  selectedProject.value = (selectedProject.value - 1 + projects.length) % projects.length;
+  console.log(selectedProject.value)
+}
+function nextProject() {
+  selectedProject.value = (selectedProject.value + 1) % projects.length;
+  console.log(selectedProject.value)
+}
 </script>
 
 <template>
@@ -17,11 +31,21 @@ useSmoothTransition(midBis, ref(-5));
     }}</span>
   </h1>
   <div class="row">
-    <p>
-      I am passionate about programming. That is why, I want to study the art of
-      designing a good application.<br />
-      I want to improve and I love how much I can learn in this field. I am very
-      interrested in AI, video game development and the latest tech news.
-    </p>
+    <div class="column">
+      <button @click="previousProject">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <Project
+        :title="currentProject?.title"
+        :keywords="currentProject?.keywords"
+        :description="currentProject?.description"
+        :image="currentProject?.image"
+        :alt="currentProject?.alt"
+        :links="currentProject?.links"
+      />
+      <button @click="nextProject">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+    </div>
   </div>
 </template>

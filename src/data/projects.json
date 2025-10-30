@@ -1,0 +1,18 @@
+[
+    {
+        "title": "GeraidV3",
+        "keywords": "Java, Internship, GitLab, Swing",
+        "description": "I worked on GeraidV3 during my internship at ENSICAEN in 2025. The goal was to create an application for managing multisport races. You can register and manage teams for these races.",
+        "image":"",
+        "alt":"",
+        "links": ["https://gitlab.com/clouardregis/geraidv3", "https://vikazim.fr/geraid-2/"]
+    },
+    {
+        "title": "Pypierre Ascension",
+        "keywords": "Unity, C#, Music",
+        "description": "As part of a team, I participated in the Code Game Jam 2025 of Montpellier. I helped create this game by fixing bugs and producing music.",
+        "image":"",
+        "alt":"",
+        "links": ["https://astate.itch.io/pypierre-ascension"]
+    }
+]
