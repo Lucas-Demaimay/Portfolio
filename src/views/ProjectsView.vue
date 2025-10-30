@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import Project from "@/components/Project.vue";
 import { useAnimationStore } from "@/composable/useAnimationStore";
 import { useSmoothTransition } from "@/composable/useSmoothTransition";
 const { start, mid, startBis, midBis } = useAnimationStore();
@@ -17,11 +18,8 @@ useSmoothTransition(midBis, ref(-5));
     }}</span>
   </h1>
   <div class="row">
-    <p>
-      I am passionate about programming. That is why, I want to study the art of
-      designing a good application.<br />
-      I want to improve and I love how much I can learn in this field. I am very
-      interrested in AI, video game development and the latest tech news.
-    </p>
+    <div class="column">
+      <Project title="Projet 1" description="hello it is a project" srcImage="https://pikmin.fandom.com/fr/wiki/Pikmin_rouge" link="lien::lien"/>
+    </div>
   </div>
 </template>

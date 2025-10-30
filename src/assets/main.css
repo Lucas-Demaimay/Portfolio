@@ -4,6 +4,7 @@
 @import "./style/animation.css";
 @import "./style/header.css";
 @import "./style/footer.css";
+@import "./style/project.css";
 
 * {
   margin: 0;

@@ -1,0 +1,35 @@
+.project {
+  background-color: #353535;
+  color: white;
+  padding: 10px;
+  border: solid white 1px;
+  border-radius: 1vw;
+  animation: borderColorAnimation infinite 10s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project > a {
+    color: white;
+}
+
+.keywords {
+  margin: auto;
+  padding: auto;
+  background: none;
+  border: none;
+  font-size: small;
+}
+
+.description {
+  margin: auto;
+  padding: auto;
+}
+
+img {
+    margin: 1vw;
+    max-width: fit-content;
+    max-height: fit-content;
+}
