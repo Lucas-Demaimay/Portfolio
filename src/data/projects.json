@@ -1,0 +1,10 @@
+[
+    {
+        "title": "GeraidV3",
+        "keywords": "Java, Internship, GitLab, Swing",
+        "description": "I worked on GeraidV3 during my internship in ENSICAEN in 2025. The goal was to create an application to create multisport race. You can register and mange teams for these races.",
+        "image":"",
+        "alt":"",
+        "links": ["https://gitlab.com/clouardregis/geraidv3", "https://vikazim.fr/geraid-2/"]
+    }
+]

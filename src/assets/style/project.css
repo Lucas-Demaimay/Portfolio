@@ -1,6 +1,6 @@
 .project {
-  background-color: #353535;
-  color: white;
+  background-color: #ffffff75;
+  color: #353535;
   padding: 10px;
   border: solid white 1px;
   border-radius: 1vw;
@@ -9,10 +9,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
-
-.project > a {
-    color: white;
+  width: 50%;
 }
 
 .keywords {
@@ -24,7 +21,7 @@
 }
 
 .description {
-  margin: auto;
+  margin: 1vw;
   padding: auto;
 }
 

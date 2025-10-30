@@ -3,13 +3,16 @@ defineProps({
     title: {
         type: String
     },
+    keywords: {
+        type: String 
+    },
     description: {
         type: String
     },
-    link: {
-        type: String
+    links: {
+        type: Array
     },
-    srcImage: {
+    image: {
         type: String
     },
     alt: {
@@ -21,9 +24,9 @@ defineProps({
 <template>
     <div class="project"> 
         <h2>{{ title }}</h2>
-        <p class="keywords">Java, </p>
+        <p class="keywords">{{ keywords }}</p>
         <p class="description">{{ description }}</p>
-        <img :src="srcImage" :alt="alt"></img>
-        <a class="project-link">{{ link }}</a>
+        <img v-if="image" :src="image" :alt="alt"></img>
+        <a v-for="link in links" class="project-link">{{ link }}</a>
     </div>
 </template>
