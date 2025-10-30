@@ -10,6 +10,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 50%;
+  min-width: 50%;
 }
 
 .keywords {

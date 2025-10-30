@@ -32,7 +32,9 @@ function nextProject() {
   </h1>
   <div class="row">
     <div class="column">
-      <button @click="previousProject"></button>
+      <button @click="previousProject">
+        <i class="fas fa-arrow-up"></i>
+      </button>
       <Project
         :title="currentProject?.title"
         :keywords="currentProject?.keywords"
@@ -41,7 +43,9 @@ function nextProject() {
         :alt="currentProject?.alt"
         :links="currentProject?.links"
       />
-      <button @click="nextProject"></button>
+      <button @click="nextProject">
+        <i class="fas fa-arrow-down"></i>
+      </button>
     </div>
   </div>
 </template>
