@@ -1,4 +1,4 @@
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 
 export function useScroll() {
   const scroll = ref(null);
@@ -10,6 +10,10 @@ export function useScroll() {
       const bar = indicator.value;
       const scrollTop = box.scrollTop;
       const scrollHeight = box.scrollHeight - box.clientHeight;
+
+      const barHeight = box.clientHeight / box.scrollHeight;
+      bar.style.height = `${barHeight*100}%`;
+
       const percent = scrollTop / scrollHeight;
       const maxOffset = box.scrollHeight - bar.offsetHeight;
 
@@ -19,13 +23,20 @@ export function useScroll() {
   }
 
   onMounted(() => {
-    scroll.value.addEventListener("scroll", onScroll);
-    onScroll();
+    nextTick(() => {
+      if (scroll.value) {
+        scroll.value.addEventListener("scroll", onScroll);
+        window.addEventListener("resize", onScroll);
+        onScroll();
+      }
+    });
   });
+
   onBeforeUnmount(() => {
     if (scroll.value) {
       scroll.value.removeEventListener("scroll", onScroll);
     }
+    window.removeEventListener("resize", onScroll);
   });
 
   return { scroll, indicator };

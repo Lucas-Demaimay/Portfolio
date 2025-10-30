@@ -19,7 +19,7 @@ useSmoothTransition(midBis, ref(15));
   <div class="row">
     <div class="column">
       <p>
-        I am Lucas Demaimay.<br />I am currently open to apprenticeship
+        I am Lucas Demaimay.<br />I am currently open to apprenticeship and internship
         opportunities in the field of IT.
       </p>
     </div>

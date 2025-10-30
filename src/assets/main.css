@@ -77,6 +77,7 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   flex: 1;
 }
 
@@ -127,10 +128,6 @@ h1 span {
   transform: translateX(5vw);
   color: #35353500;
   animation: appear 1s ease-in-out forwards;
-}
-
-h3 {
-  margin-left: 3vw;
 }
 
 #pointer {
@@ -208,11 +205,10 @@ main ul {
   top: 0;
   right: 0;
   width: 0.25vw;
-  height: 30%;
   background-color: #353535;
   border-radius: 1vh;
   animation: 10s infinite colorBlackAnimation ease-in-out;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, height 0.1s ease-out;
 }
 
 hr {
