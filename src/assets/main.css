@@ -35,6 +35,58 @@ main {
   transition: font-size 0.2s ease-in;
 }
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: none;
+  margin: 0.5vw;
+  padding: 0.5vw;
+  color: white;
+  background-color: #353535;
+  border: solid white 3px;
+  border-radius: 1vw;
+  animation: borderColorAnimation infinite 10s ease-in-out;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    transform 0.05s ease-in-out;
+}
+
+button:hover {
+  color: #353535;
+  background-color: white;
+}
+
+button:active {
+  transform: scale(75%);
+}
+
+.row {
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  align-items: stretch;
+  height: 60vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.unique {
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+
 a {
   text-decoration: none;
   color: #353535;
@@ -59,7 +111,7 @@ h1 {
   font-family: "Monoton", Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 10vh;
+  font-size: 9vh;
   margin-left: 2vw;
   transition: font-size 0.2s ease-in;
 }
@@ -94,6 +146,8 @@ h1 span {
 }
 
 .foreground {
+  overflow-x: auto;
+  max-width: 100vw;
   z-index: 5;
   position: relative;
 }
@@ -112,7 +166,7 @@ p {
   margin: 3vw;
   padding: 1.5vw;
   font-size: 2.5vh;
-  background-color: #FFFFFF75;
+  background-color: #ffffff75;
   transition: font-size 0.2s ease-in;
   border: solid white 1px;
   border-radius: 1vw;
@@ -120,9 +174,52 @@ p {
   width: fit-content;
 }
 
+main ul {
+  list-style: none;
+  margin: 2vw;
+  padding: 1vw;
+  font-size: 2.5vh;
+  background-color: #ffffff75;
+  transition: font-size 0.2s ease-in;
+  border: solid white 1px;
+  border-radius: 1vw;
+  animation: borderColorAnimation infinite 10s ease-in-out;
+  width: fit-content;
+}
+
+.scroll {
+  position: relative;
+  flex-grow: 1;
+  max-height: 65%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.25vw;
+  background-color: #353535;
+  border-radius: 1vh;
+  animation: 10s infinite colorBlackAnimation ease-in-out;
+  transition: transform 0.1s ease-out, height 0.1s ease-out;
+}
+
+hr {
+  border: solid 1px white;
+  animation: borderColorAnimation infinite 5s ease-in-out;
+  margin: 1vw;
+}
+
 .block {
   background-color: #ffffff00;
-  width: 0.7%;
+  width: 0.5%;
   flex: 1;
   border-radius: 25%;
   margin: 0.1%;
@@ -132,7 +229,7 @@ p {
 
 .invertedBlock {
   background-color: #ffffff00;
-  width: 0.7%;
+  width: 0.5%;
   border-radius: 25%;
   flex: 1;
   margin: 0.1%;
