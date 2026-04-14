@@ -36,7 +36,8 @@ const tools = [
   "OpenOffice",
   "LibreOffice",
   "StarUML",
-  
+  "Docker",
+  "Kubernetes"
 ];
 
 useSmoothTransition(start, ref(20));
